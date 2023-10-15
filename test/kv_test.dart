@@ -1,16 +1,17 @@
 import 'package:kv/kv.dart';
 import 'package:test/test.dart';
+import 'package:kv/storage/memory.dart';
 
 void main() {
   group('A group of tests', () {
-    final kv = Kv.fromJson({'key': 'awesome', 'value': 'dart'});
+    var memoryStorage = KV.by(Memory());
 
     setUp(() {
-      // Additional setup goes here.
+      memoryStorage.set("key", "new value");
     });
 
     test('First Test', () {
-      expect(kv.toJson(), {'key': 'awesome', 'value': 'dart'});
+      expect(memoryStorage.get("key"), "new value");
     });
   });
 }

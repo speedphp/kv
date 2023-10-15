@@ -1,7 +1,8 @@
 name: kv
 description:  Another Key-Value storage for Dart.
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/speedphp/kv
+homepage: https://github.com/SpeedPHP/kv
 
 environment:
   sdk: ^3.1.1
