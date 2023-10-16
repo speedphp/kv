@@ -1,3 +1,5 @@
+## 1.0.5
+- Constructor has default value.
 ## 1.0.4
 - Unify exports.
 ## 1.0.3

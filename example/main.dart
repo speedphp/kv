@@ -1,7 +1,7 @@
 import 'package:kv/kv.dart';
 
 void main() {
-  var memoryKV = KV(MemoryStorage());
+  var memoryKV = KV();
   memoryKV.listen("key", (newVal) {
     print('You will set: $newVal');
   });

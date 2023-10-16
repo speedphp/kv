@@ -6,11 +6,7 @@ class KV {
 
   AbstractStorage _storage = MemoryStorage();
 
-  // factory KV() {
-  //   return _instance;
-  // }
-
-  factory KV(AbstractStorage? storage) {
+  factory KV([AbstractStorage? storage]) {
     if (storage == null) {
       return _instance;
     }

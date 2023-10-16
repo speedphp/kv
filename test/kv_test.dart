@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('Test for memory kv.', () {
-    var memoryKV = KV(MemoryStorage());
+    var memoryKV = KV();
 
     setUp(() {
       memoryKV.set("key", "new value");
