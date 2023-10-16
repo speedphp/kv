@@ -54,6 +54,11 @@ class FileStorage extends AbstractStorage {
     _saveToFile();
   }
 
+  @override
+  List<String> keys() {
+    return _content.keys.toList();
+  }
+
   Future<void> _saveToFile() async {
     final file = File(path);
     await file.writeAsString(jsonEncode(_content));

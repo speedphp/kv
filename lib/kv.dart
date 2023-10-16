@@ -44,4 +44,8 @@ class KV {
   void listen(String key, Function listener) {
     _storage.listen(key, listener);
   }
+
+  List<String> keys() {
+    return _storage.keys();
+  }
 }

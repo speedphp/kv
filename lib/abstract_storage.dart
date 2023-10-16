@@ -4,4 +4,5 @@ abstract class AbstractStorage {
   void remove(String key);
   void clear();
   void listen(String key, Function listener);
+  List<String> keys();
 }

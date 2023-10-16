@@ -1,3 +1,5 @@
+## 1.0.2
+- Add keys method.
 ## 1.0.1
 - No need to use by, and add multi-file tests.
 ## 1.0.0

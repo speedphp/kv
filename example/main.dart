@@ -23,4 +23,30 @@ void main() {
   var valueCopy = fileKVCopy.get("key");
   print('Copy value: $valueCopy');
   print('Welcome by File: ${fileKV.get("key")}');
+
+  var userDto = UserDTO("John", "John@gmail.com", "123456");
+
+  fileKV.set("newKey", userDto);
+  var keys = fileKV.keys();
+  print('Keys: $keys');
+  print('Last key: ${keys.last}, and value is ${fileKV.get(keys.last)}');
+}
+
+class UserDTO {
+  final String name;
+  final String email;
+  final String password;
+
+  UserDTO(this.name, this.email, this.password);
+
+  UserDTO.fromJson(Map<String, dynamic> json)
+      : name = json['name'],
+        email = json['email'],
+        password = json['password'];
+
+  Map<String, dynamic> toJson() => {
+        'name': name,
+        'email': email,
+        'password': password,
+      };
 }

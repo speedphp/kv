@@ -41,4 +41,9 @@ class MemoryStorage extends AbstractStorage {
   void clear() {
     _data.clear();
   }
+
+  @override
+  List<String> keys() {
+    return _data.keys.toList();
+  }
 }
