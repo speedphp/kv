@@ -8,11 +8,14 @@ class KV {
 
   AbstractStorage _storage = MemoryStorage();
 
-  factory KV() {
-    return _instance;
-  }
+  // factory KV() {
+  //   return _instance;
+  // }
 
-  factory KV.by(AbstractStorage storage) {
+  factory KV(AbstractStorage? storage) {
+    if (storage == null) {
+      return _instance;
+    }
     return KV._internal(storage);
   }
 

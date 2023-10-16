@@ -1,3 +1,5 @@
+## 1.0.1
+- No need to use by, and add multi-file tests.
 ## 1.0.0
 - File storage has been implemented and is ready for use.
 ## 0.0.3

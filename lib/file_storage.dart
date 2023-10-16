@@ -25,7 +25,8 @@ class FileStorage extends AbstractStorage {
 
   @override
   void clear() {
-    File(path).deleteSync();
+    _content.clear();
+    _saveToFile();
   }
 
   @override
