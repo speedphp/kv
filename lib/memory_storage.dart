@@ -1,13 +1,13 @@
-import 'package:kv/storage/storage.dart';
+import 'package:kv/abstract_storage.dart';
 
-class Memory extends Storage {
-  static final Memory _instance = Memory._internal();
+class MemoryStorage extends AbstractStorage {
+  static final MemoryStorage _instance = MemoryStorage._internal();
 
-  factory Memory() {
+  factory MemoryStorage() {
     return _instance;
   }
 
-  Memory._internal();
+  MemoryStorage._internal();
 
   final Map<String, dynamic> _data = {};
   final Map<String, Function> _listeners = {};

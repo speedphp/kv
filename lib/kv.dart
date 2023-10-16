@@ -1,23 +1,26 @@
 library kv;
 
-import 'package:kv/storage/memory.dart';
-import 'package:kv/storage/storage.dart';
+import 'package:kv/memory_storage.dart';
+import 'package:kv/abstract_storage.dart';
 
 class KV {
   static final KV _instance = KV._internal();
 
-  Storage _storage = Memory();
+  AbstractStorage _storage = MemoryStorage();
 
   factory KV() {
     return _instance;
   }
 
-  factory KV.by(Storage storage) {
-    _instance._storage = storage;
-    return _instance;
+  factory KV.by(AbstractStorage storage) {
+    return KV._internal(storage);
   }
 
-  KV._internal();
+  KV._internal([AbstractStorage? storage]) {
+    if (storage != null) {
+      _storage = storage;
+    }
+  }
 
   void set(String key, dynamic value) {
     _storage.set(key, value);

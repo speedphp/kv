@@ -1,3 +1,5 @@
+## 1.0.0
+- File storage has been implemented and is ready for use.
 ## 0.0.3
 - Implemented new methods and memory storage implementation.
 ## 0.0.2
