@@ -1,6 +1,4 @@
-import 'package:kv/file_storage.dart';
 import 'package:kv/kv.dart';
-import 'package:kv/memory_storage.dart';
 
 void main() {
   var memoryKV = KV(MemoryStorage());

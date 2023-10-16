@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:kv/abstract_storage.dart';
+import 'abstract_storage.dart';
 
 class FileStorage extends AbstractStorage {
   final String path;

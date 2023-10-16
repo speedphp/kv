@@ -1,4 +1,4 @@
-import 'package:kv/abstract_storage.dart';
+import 'abstract_storage.dart';
 
 class MemoryStorage extends AbstractStorage {
   static final MemoryStorage _instance = MemoryStorage._internal();

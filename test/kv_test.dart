@@ -1,7 +1,5 @@
-import 'package:kv/file_storage.dart';
 import 'package:kv/kv.dart';
 import 'package:test/test.dart';
-import 'package:kv/memory_storage.dart';
 
 void main() {
   group('Test for memory kv.', () {
