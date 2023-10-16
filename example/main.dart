@@ -29,7 +29,8 @@ void main() {
   fileKV.set("newKey", userDto);
   var keys = fileKV.keys();
   print('Keys: $keys');
-  print('Last key: ${keys.last}, and value is ${fileKV.get(keys.last)}');
+  print(
+      'Last key: ${keys.last}, and value is ${fileKV.get<UserDTO>(keys.last)}');
 }
 
 class UserDTO {

@@ -29,8 +29,9 @@ class KV {
     _storage.set(key, value);
   }
 
-  dynamic get(String key) {
-    return _storage.get(key);
+  // 泛型的get方法
+  T get<T>(String key) {
+    return _storage.get(key) as T;
   }
 
   void remove(String key) {
