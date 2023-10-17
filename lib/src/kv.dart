@@ -27,6 +27,14 @@ class KV {
     return _storage.get(key);
   }
 
+  T? getObject<T>(String key, T Function(Map<String, dynamic>) fromJson) {
+    var value = _storage.get(key);
+    if (value == null) {
+      return null;
+    }
+    return fromJson(value);
+  }
+
   void remove(String key) {
     _storage.remove(key);
   }

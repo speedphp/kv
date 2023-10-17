@@ -1,3 +1,5 @@
+## 1.0.7
+- Add getObject method.
 ## 1.0.6
 - Drop generics to get method.
 ## 1.0.5
