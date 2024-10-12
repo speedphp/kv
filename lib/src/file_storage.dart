@@ -19,6 +19,9 @@ class FileStorage extends AbstractStorage {
   }
 
   FileStorage._internal(this.path) {
+    if (!File(path).existsSync()) {
+      throw PathNotFoundException(path, OSError('File $path not found'));
+    }
     final fileContent = File(path).readAsStringSync();
     _content = fileContent.isNotEmpty ? jsonDecode(fileContent) : {};
   }
